@@ -1,26 +1,30 @@
 "use client";
 import { motion } from "framer-motion";
+import { Boxes } from "@/components/ui/background-boxes";
 
 export default function Hero() {
     return (
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
+        <div className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center text-center px-4 bg-slate-950">
+            
+            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none [mask-image:radial-gradient(transparent,white)]" />
+            <Boxes />
 
-            {/* Título Principal */}
+            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6"
+                className="relative z-10 text-5xl md:text-7xl font-bold tracking-tight text-white mb-6"
             >
                 Hola, soy <span className="text-blue-500">Yilin Zhou</span>
             </motion.h1>
 
-            {/* Descripción técnica */}
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="max-w-2xl text-lg md:text-xl text-slate-400 leading-relaxed mb-10"
+                className="relative z-10 max-w-2xl text-lg md:text-xl text-slate-400 leading-relaxed mb-10"
             >
                 Desarrolladora{" "}
                 <span className="text-slate-200 font-semibold">
@@ -33,11 +37,11 @@ export default function Hero() {
                 . Transformando datos en soluciones inteligentes.
             </motion.p>
 
-            {/* Botón de acción */}
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
+                className="relative z-10"
             >
                 <a
                     href="#contact"
