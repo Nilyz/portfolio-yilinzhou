@@ -1,11 +1,11 @@
-
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-slate-950 flex items-center justify-center">
+    <main className="flex flex-col min-h-screen bg-slate-950">
       <Hero />
-      {/* El resto de secciones irán debajo del Hero conforme hagas scroll */}
+      <About />
     </main>
   );
 }
