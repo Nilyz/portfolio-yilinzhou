@@ -1,29 +1,29 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Star, Sparkles } from "lucide-react";
+import { GraduationCap, Code2, Sparkles } from "lucide-react";
 
 const events = [
     {
-        year: "2024",
-        title: "Desarrollo Web",
-        desc: "Fundamentos de programación y arquitectura de software.",
-        icon: <Star className="w-5 h-5" />,
+        year: "2022 - 2024",
+        title: "Desarrollo de Aplicaciones Web",
+        desc: "Formación en desarrollo web centrada en los fundamentos de HTML, CSS y JavaScript, así como en buenas prácticas de maquetación y lógica de frontend.",
+        icon: <Code2 className="w-5 h-5" />,
         styles: "bg-soft-grey text-dark shadow-soft-grey/10",
         accent: "text-dark/60",
     },
     {
-        year: "2025",
+        year: "2023 - 2025",
         title: "Desarrollo Multiplataforma",
-        desc: "Inmersión en Big Data, modelos predictivos y Python.",
+        desc: "Grado Superior en Desarrollo Multiplataforma, reforzando la programación orientada a objetos, el desarrollo de aplicaciones y las bases de sistemas y bases de datos.",
         icon: <GraduationCap className="w-5 h-5" />,
         styles: "bg-beige text-dark shadow-beige/10",
         accent: "text-dark/60",
     },
     {
         year: "Hoy",
-        title: "Especialización IA & Big Data",
-        desc: "Soluciones que unen desarrollo robusto con datos.",
+        title: "Especialización en IA & Big Data",
+        desc: "Formación en Big Data e Inteligencia Artificial, incluyendo modelos de lenguaje, técnicas de recuperación de información (RAG) y procesamiento de grandes volúmenes de datos.",
         icon: <Sparkles className="w-5 h-5" />,
         styles: "bg-sage text-dark shadow-sage/10",
         accent: "text-dark/60",
