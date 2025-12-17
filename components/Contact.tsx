@@ -1,83 +1,87 @@
 "use client";
+import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, FileText, Send } from "lucide-react";
+import { Mail, Linkedin, Github, FileText, Send, Sparkles } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 px-6 bg-slate-950 relative">
-            <div className="max-w-4xl mx-auto text-center">
+        <section id="contact" className="py-24 px-6 bg-dark">
+            <div className="max-w-6xl mx-auto">
+                {/* TÍTULO ---------- 05. Contacta Conmigo ---------- */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="mb-12"
+                    className="flex items-center gap-4 mb-16"
                 >
-                    <span className="text-blue-500 font-mono text-xl block mb-2">
-                        04. ¿Hablamos?
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                        Ponte en contacto
-                    </h2>
-                    <p className="text-slate-400 text-lg max-w-xl mx-auto">
-                        Actualmente estoy abierta a nuevas oportunidades y
-                        colaboraciones en proyectos de{" "}
-                        <span className="text-blue-400">
-                            Desarrollo e Inteligencia Artificial
+                    <h2 className="text-3xl md:text-4xl font-bold text-beige tracking-tighter">
+                        <span className="text-lime font-mono text-2xl mr-2">
+                            05.
                         </span>
-                        .
-                    </p>
+                        Contacta Conmigo
+                    </h2>
+                    <div className="h-[2px] bg-sage/10 flex-grow" />
                 </motion.div>
 
+                {/* Tarjeta Principal de Contacto */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
+                    initial={{ opacity: 0, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="bg-slate-900/50 border border-slate-800 p-8 md:p-12 rounded-3xl backdrop-blur-sm"
+                    className="bg-card border border-sage/10 p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-sage/5 relative overflow-hidden"
                 >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="text-left space-y-4">
-                            <h3 className="text-2xl font-bold text-white">
+                    <Sparkles className="absolute top-6 right-6 text-sage/10 w-12 h-12" />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div className="text-left space-y-6">
+                            <h3 className="text-2xl font-bold text-beige tracking-tight">
                                 ¿Tienes una idea en mente?
                             </h3>
-                            <p className="text-slate-400">
-                                Ya sea para una vacante, un proyecto freelance o
-                                simplemente para saludar, mi bandeja de entrada
-                                siempre está abierta.
+                            <p className="text-beige/50 text-sm leading-relaxed">
+                                Ya sea para una vacante, un proyecto
+                                colaborativo o simplemente para compartir
+                                conocimientos sobre Big Data, estaré encantada
+                                de leerte.
                             </p>
+
+                            {/* Botón de enviar email - COLOR LIME */}
                             <a
                                 href="mailto:tu-email@ejemplo.com"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-all group"
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-lime text-dark font-black rounded-full hover:scale-105 transition-all group shadow-lg shadow-lime/20"
                             >
                                 Enviar Email
                                 <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </a>
                         </div>
 
-                        <div className="flex flex-col gap-4">
+                        {/* Columna de Enlaces Sociales con Hover Dinámico */}
+                        <div className="flex flex-col gap-3">
                             <SocialLink
-                                href="https://linkedin.com/in/tu-usuario"
+                                href="https://www.linkedin.com/in/yilinzzhou/"
                                 icon={<Linkedin className="w-5 h-5" />}
                                 label="LinkedIn"
                                 sub="Conectemos profesionalmente"
+                                hoverClass="hover:bg-sage" // Hover Verde Sage
                             />
                             <SocialLink
-                                href="https://github.com/tu-usuario"
+                                href="https://github.com/Nilyz"
                                 icon={<Github className="w-5 h-5" />}
                                 label="GitHub"
                                 sub="Mira mis repositorios"
+                                hoverClass="hover:bg-beige" // Hover Gris
                             />
                             <SocialLink
-                                href="/mi-cv.pdf"
+                                href="/YilinZhou_cv.pdf"
                                 icon={<FileText className="w-5 h-5" />}
                                 label="Descargar CV"
-                                sub="Versión en PDF"
+                                sub="Versión detallada en PDF"
+                                hoverClass="hover:bg-soft-grey" // Hover Beige
+                                isDownload={true}
                             />
                         </div>
                     </div>
                 </motion.div>
-
             </div>
         </section>
     );
@@ -88,25 +92,35 @@ function SocialLink({
     icon,
     label,
     sub,
+    hoverClass,
+    isDownload = false,
 }: {
     href: string;
     icon: React.ReactNode;
     label: string;
     sub: string;
+    hoverClass: string;
+    isDownload?: boolean;
 }) {
     return (
         <a
             href={href}
-            target="_blank"
+            target={isDownload ? "_self" : "_blank"}
             rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 bg-slate-800/30 border border-slate-800 rounded-2xl hover:border-blue-500/50 hover:bg-slate-800/50 transition-all group text-left"
+            download={isDownload}
+            /* Por defecto: fondo oscuro neutro y texto claro. Al hover: cambia fondo y texto a oscuro */
+            className={`flex items-center gap-4 p-4 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 group text-left ${hoverClass} hover:scale-[1.02]`}
         >
-            <div className="p-2 bg-slate-900 rounded-lg text-blue-500 group-hover:scale-110 transition-transform">
+            <div className="p-2.5 bg-white/5 rounded-xl text-sage group-hover:text-dark group-hover:bg-dark/10 transition-colors">
                 {icon}
             </div>
             <div>
-                <p className="text-white font-bold text-sm">{label}</p>
-                <p className="text-slate-500 text-xs">{sub}</p>
+                <p className="text-beige font-bold text-sm group-hover:text-dark transition-colors">
+                    {label}
+                </p>
+                <p className="text-beige/30 text-[10px] uppercase tracking-wider font-mono group-hover:text-dark/60 transition-colors">
+                    {sub}
+                </p>
             </div>
         </a>
     );

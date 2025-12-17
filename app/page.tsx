@@ -6,9 +6,10 @@ import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 
 
+
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-slate-950">
+    <main className="flex flex-col min-h-screen color-soft-bg">
       <Hero />
       <About />
       <Experience />
