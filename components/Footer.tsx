@@ -14,7 +14,8 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start gap-2">
                         <div className="flex items-center gap-2 group cursor-default">
                             <span className="text-xl font-bold text-beige tracking-tighter">
-                                <span className="text-lime">{"<"}</span> Yilin Zhou <span className="text-lime">{"/>"}</span>
+                                <span className="text-lime">{"<"}</span> Yilin
+                                Zhou <span className="text-lime">{"/>"}</span>
                             </span>
                         </div>
                         <p className="text-beige/40 text-[11px] font-mono uppercase tracking-widest">
@@ -114,7 +115,7 @@ function FooterSocialIcon({
             rel="noopener noreferrer"
             className={`p-2.5 bg-white/5 border border-white/5 rounded-xl text-beige/40 ${hover} hover:text-dark transition-all duration-300 hover:scale-110`}
         >
-            {React.cloneElement(icon as React.ReactElement, {
+            {React.cloneElement(icon as any, {
                 className: "w-5 h-5",
             })}
         </a>
