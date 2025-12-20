@@ -14,7 +14,7 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start gap-2">
                         <div className="flex items-center gap-2 group cursor-default">
                             <span className="text-xl font-bold text-beige tracking-tighter">
-                                Yilin Zhou
+                                <span className="text-lime">{"<"}</span> Yilin Zhou <span className="text-lime">{"/>"}</span>
                             </span>
                         </div>
                         <p className="text-beige/40 text-[11px] font-mono uppercase tracking-widest">

@@ -4,7 +4,7 @@ export interface Project {
     tech: string[];
     link: string;
     github: string;
-    type: "AI" | "Big Data" | "App" | "Analytic";
+    type:  "AI" | "Big Data" | "Web App" | "Mobile App";
     image: string;
 }
 
@@ -12,31 +12,92 @@ export const PROJECTS: Project[] = [
     {
         title: "Botzy PDF",
         description:
-            "Interactive AI assistant to get context-aware answers from any PDF using Streamlit and Google Gemini.",
-        tech: ["Python", "Streamlit ", "Gemini API", "PyPDF2", "Chromadb"],
-        link: "https://demo.com",
-        github: "https://github.com/tu-usuario/proyecto1",
+            "Asistente AI interactivo que responde preguntas basadas en el contenido de cualquier PDF utilizando Streamlit y Google Gemini, con un flujo de trabajo RAG para evitar respuestas inventadas.",
+        tech: [
+            "Python",
+            "Streamlit ",
+            "Gemini API",
+            "PyPDF2",
+            "Chromadb",
+            "RAG",
+        ],
+        link: "https://github.com/Nilyz/llm-pdf-assistant",
+        github: "https://github.com/Nilyz/llm-pdf-assistant",
         type: "AI",
-        image: "/projects/botzy-pdf.png",
+        image: "/botzy_preview.png",
     },
     {
-        title: "Data Pipeline con PySpark",
+        title: "SkillBridge",
         description:
-            "Procesamiento de grandes volúmenes de datos (ETL) optimizado para entornos distribuidos.",
-        tech: ["PySpark", "Hadoop", "SQL"],
+            "Tu asistente de carrera inteligente impulsado por IA que analiza CVs, detecta habilidades, planifica transiciones de carrera y compara perfiles contra ofertas de trabajo en tiempo real.",
+        tech: [
+            "Python",
+            "Streamlit",
+            "Llama 3",
+            "Groq API",
+            "PyMuPDF",
+            "RAG",
+        ],
         link: "#",
-        github: "https://github.com/tu-usuario/proyecto2",
-        type: "Big Data",
-        image: "/projects/botzy-pdf.png",
+        github: "https://github.com/tu-usuario/skillbridge",
+        type: "AI",
+        image: "/skillbridge_preview.png",
     },
     {
-        title: "App de Gestión Inteligente",
+        title: "OniTime",
         description:
-            "Aplicación multiplataforma que integra una base de datos local con sincronización en la nube.",
-        tech: ["Java", "Firebase", "Android SDK"],
-        link: "#",
-        github: "https://github.com/tu-usuario/proyecto3",
-        type: "App",
-        image: "/projects/app-gestion-inteligente.png",
+            "Aplicación móvil que combina gestión del tiempo con bienestar emocional, ayudando a planificar tareas, registrar estados de ánimo y desarrollar hábitos saludables de manera gamificada.",
+        tech: ["Kotlin", "Jetpack Compose", "Firebase", "Gemini AI"],
+        link: "https://tfgonitime.web.app/",
+        github: "https://github.com/KokorikoFC/TfgOnitime",
+        type: "Mobile App",
+        image: "/onitime_preview.png",
+    },
+    {
+        title: "Tienda de Pastelería en React",
+        description:
+            "Sitio web para una pastelería en línea, que permite explorar productos y realizar compras con una experiencia de usuario amigable, inspirada en un estilo asiático acogedor y visualmente atractivo.",
+        tech: [
+            "React",
+            "React Context API",
+            "Custom Hooks",
+            "JSON",
+            "HTML",
+            "CSS",
+        ],
+        link: "https://github.com/KokorikoFC/tiendaConReact",
+        github: "https://github.com/KokorikoFC/tiendaConReact",
+        type: "Web App",
+        image: "/tiendareact_preview.png",
+    },
+    {
+        title: "Facturador Web",
+        description:
+            "Plataforma web complementaria para la aplicación móvil Facturador, que permite gestionar facturas y proyectos, visualizando datos en tiempo real sincronizados con Firebase, con dashboard interactivo y gestión de itinerarios profesionales.",
+        tech: ["Angular", "Bootstrap", "Firebase", "D3.js", "jQuery"],
+        link: "https://github.com/KokorikoFC/FacturasWebIntermodular",
+        github: "https://github.com/KokorikoFC/FacturasWebIntermodular",
+        type: "Web App",
+        image: "/facturasweb_preview.png",
+    },
+    {
+        title: "Brew & Co",
+        description:
+            "Aplicación móvil para la gestión interna de cafeterías, centralizando clientes, inventario y eventos, con sincronización en tiempo real a través de Firebase y una interfaz intuitiva y personalizable.",
+        tech: ["Kotlin", "Jetpack Compose", "Firebase", "Firestore"],
+        link: "https://github.com/KokorikoFC/CRM_Brew-Co",
+        github: "https://github.com/KokorikoFC/CRM_Brew-Co",
+        type: "Mobile App",
+        image: "/brewco_preview.png",
+    },
+    {
+        title: "Genshin Docs",
+        description:
+            "Página web de fans para Genshin Impact que proporciona información detallada sobre los personajes, con búsqueda y filtros por elemento o nación.",
+        tech: ["HTML", "CSS", "JavaScript", " API REST", "BEM"],
+        link: "https://nilyz.github.io/genshin-doc/",
+        github: "https://github.com/Nilyz/genshin-doc",
+        type: "Web App",
+        image: "/genshindocs_preview.png",
     },
 ];

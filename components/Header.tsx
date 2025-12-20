@@ -41,7 +41,7 @@ export default function Header() {
                 {/* Lado Izquierdo*/}
                 <div className="flex items-center gap-2">
                     <span className="text-lg font-bold text-beige tracking-tighter hover:text-lime transition-colors duration-300">
-                        Yilin Zhou
+                        <span className="text-lime">{"<"}</span> Yilin Zhou <span className="text-lime">{"/>"}</span>
                     </span>
                 </div>
 
