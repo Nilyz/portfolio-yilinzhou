@@ -15,8 +15,7 @@ export default function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Si el scroll es mayor a 50px, mostramos el header
-            if (window.scrollY > 50) {
+            if (window.scrollY > 0) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -39,14 +38,14 @@ export default function Header() {
             className="fixed top-0 inset-x-0 z-[100] w-full"
         >
             <nav className="flex items-center justify-between w-full px-6 py-4 bg-dark/80 backdrop-blur-md border-b border-white/5 shadow-2xl shadow-dark/50">
-                {/* Lado Izquierdo: Tu Nombre */}
+                {/* Lado Izquierdo*/}
                 <div className="flex items-center gap-2">
                     <span className="text-lg font-bold text-beige tracking-tighter hover:text-lime transition-colors duration-300">
                         Yilin Zhou
                     </span>
                 </div>
 
-                {/* Lado Derecho: Enlaces */}
+                {/* Lado Derecho*/}
                 <ul className="flex items-center gap-2">
                     {navItems.map((item) => (
                         <li key={item.name}>

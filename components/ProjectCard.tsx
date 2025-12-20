@@ -18,21 +18,18 @@ export function ProjectCard({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            /* bg-card es tu #141710 y rounded-2xl le da el toque soft */
-            className="group relative bg-card border border-sage/10 rounded-[2rem] overflow-hidden flex flex-col h-full shadow-2xl hover:border-sage/40 transition-all duration-500"
+            className="group relative bg-card border border-sage/10 rounded-[2rem] overflow-hidden flex flex-col h-full shadow-2xl hover:border-sage/40 transition-all duration-500 shadow-xl shadow-sage/3"
         >
-            {/* CABECERA ESTILO TERMINAL DETALLISTA */}
-            <div className="bg-background/50 px-5 py-4 border-b border-sage/5 flex items-center justify-between backdrop-blur-sm">
+            {/* CABECERA ESTILO TERMINAL */}
+            <div className="bg-background/50 px-5 py-4 border-b border-sage/5 flex items-center justify-between backdrop-blur-sm ">
                 <div className="flex gap-1.5">
-                    {/* Luces de terminal en tonos sage/beige pastel */}
-                    <div className="w-2.5 h-2.5 rounded-full bg-sage/10 group-hover:bg-red-400/30 transition-colors" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-sage/10 group-hover:bg-amber-400/30 transition-colors" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-sage/10 group-hover:bg-sage/40 transition-colors" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-400/30 transition-colors" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400/30 transition-colors" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-sage/40 transition-colors" />
                 </div>
                 <div className="flex items-center gap-2">
                     <Terminal className="w-3 h-3 text-sage/40" />
                     <span className="text-[10px] font-mono text-sage/40 lowercase tracking-tight">
-                        {/* Cambiado el .exe por algo de Data Science más auténtico */}
                         yilin_zhou@projects: ~/{project.title.toLowerCase().replace(/\s+/g, '_')}.py
                     </span>
                 </div>
@@ -81,12 +78,11 @@ export function ProjectCard({
                     </h3>
                 </div>
 
-                {/* Texto Beige con opacidad para suavizar, pero legible por el fondo oscuro */}
                 <p className="text-beige/60 text-sm leading-relaxed mb-8 border-l border-sage/10 pl-4 py-1 italic">
                     {project.description}
                 </p>
 
-                {/* TECNOLOGÍAS (Estilo Tags de Sistema Clean) */}
+                {/* TECNOLOGÍAS*/}
                 <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tech.map((t) => (
                         <span

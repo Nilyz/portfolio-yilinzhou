@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <section id="contact" className="py-24 px-6 bg-dark">
             <div className="max-w-6xl mx-auto">
-                {/* TÍTULO ---------- 05. Contacta Conmigo ---------- */}
+                {/* TÍTULO */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -29,23 +29,23 @@ export default function Contact() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="bg-card border border-sage/10 p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-sage/5 relative overflow-hidden"
+                    className="bg-card/60 border border-sage/10 p-8 md:p-12 rounded-[2.5rem] shadow-xl shadow-sage/3 relative overflow-hidden"
                 >
                     <Sparkles className="absolute top-6 right-6 text-sage/10 w-12 h-12" />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="text-left space-y-6">
                             <h3 className="text-2xl font-bold text-beige tracking-tight">
-                                ¿Tienes una idea en mente?
+                                ¿Hablamos?
                             </h3>
                             <p className="text-beige/50 text-sm leading-relaxed">
-                                Ya sea para una vacante, un proyecto
-                                colaborativo o simplemente para compartir
-                                conocimientos sobre Big Data, estaré encantada
-                                de leerte.
+                                Estoy abierta a oportunidades profesionales,
+                                prácticas y proyectos colaborativos relacionados
+                                con desarrollo web, multiplataforma o datos e
+                                inteligencia artificial.
                             </p>
 
-                            {/* Botón de enviar email - COLOR LIME */}
+                            {/* Botón de enviar email*/}
                             <a
                                 href="mailto:tu-email@ejemplo.com"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-lime text-dark font-black rounded-full hover:scale-105 transition-all group shadow-lg shadow-lime/20"
@@ -62,21 +62,21 @@ export default function Contact() {
                                 icon={<Linkedin className="w-5 h-5" />}
                                 label="LinkedIn"
                                 sub="Conectemos profesionalmente"
-                                hoverClass="hover:bg-sage" // Hover Verde Sage
+                                hoverClass="hover:bg-sage"
                             />
                             <SocialLink
                                 href="https://github.com/Nilyz"
                                 icon={<Github className="w-5 h-5" />}
                                 label="GitHub"
                                 sub="Mira mis repositorios"
-                                hoverClass="hover:bg-beige" // Hover Gris
+                                hoverClass="hover:bg-beige"
                             />
                             <SocialLink
                                 href="/YilinZhou_cv.pdf"
                                 icon={<FileText className="w-5 h-5" />}
                                 label="Descargar CV"
                                 sub="Versión detallada en PDF"
-                                hoverClass="hover:bg-soft-grey" // Hover Beige
+                                hoverClass="hover:bg-soft-grey"
                                 isDownload={true}
                             />
                         </div>
@@ -108,7 +108,6 @@ function SocialLink({
             target={isDownload ? "_self" : "_blank"}
             rel="noopener noreferrer"
             download={isDownload}
-            /* Por defecto: fondo oscuro neutro y texto claro. Al hover: cambia fondo y texto a oscuro */
             className={`flex items-center gap-4 p-4 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 group text-left ${hoverClass} hover:scale-[1.02]`}
         >
             <div className="p-2.5 bg-white/5 rounded-xl text-sage group-hover:text-dark group-hover:bg-dark/10 transition-colors">

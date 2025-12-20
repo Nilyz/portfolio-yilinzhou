@@ -63,7 +63,7 @@ export default function About() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.2 }}
                         >
-                            ¡Hola! :D
+                            ¡Hola!
                         </motion.h3>
 
                         <div className="space-y-6">
@@ -109,10 +109,13 @@ export default function About() {
                             {/* Tags de Resumen */}
                             <div className="flex gap-3 pt-4">
                                 <span className="px-4 py-1.5 rounded-full border border-sage/20 bg-sage/5 text-sage text-xs font-mono">
-                                    + UX/UI Driven
+                                    + Multiplatform Dev
                                 </span>
                                 <span className="px-4 py-1.5 rounded-full border border-sage/20 bg-lime/5 text-sage text-xs font-mono">
-                                    + AI Specialist
+                                    + AI Solutions
+                                </span>
+                                <span className="px-4 py-1.5 rounded-full border border-sage/20 bg-lime/5 text-sage text-xs font-mono">
+                                    + Data Engineering
                                 </span>
                             </div>
                         </div>

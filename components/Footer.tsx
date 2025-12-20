@@ -13,7 +13,6 @@ export default function Footer() {
                     {/* Identidad con toque AI */}
                     <div className="flex flex-col items-center md:items-start gap-2">
                         <div className="flex items-center gap-2 group cursor-default">
-                            
                             <span className="text-xl font-bold text-beige tracking-tighter">
                                 Yilin Zhou
                             </span>
@@ -66,29 +65,29 @@ export default function Footer() {
                         <FooterSocialIcon
                             href="https://github.com/Nilyz"
                             icon={<Github />}
-                            hover="hover:bg-soft-grey"
+                            hover="hover:bg-sage"
                         />
                         <FooterSocialIcon
                             href="https://www.linkedin.com/in/yilinzzhou/"
                             icon={<Linkedin />}
-                            hover="hover:bg-sage"
+                            hover="hover:bg-beige"
                         />
                         <FooterSocialIcon
                             href="mailto:tu-email@ejemplo.com"
                             icon={<Mail />}
-                            hover="hover:bg-beige"
+                            hover="hover:bg-soft-grey"
                         />
                     </div>
 
                     {/* Credits */}
                     <div className="flex flex-col items-center md:items-end gap-1">
-                        <p className="text-beige/30 text-[10px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">
+                        <p className="text-beige/30 text-[14px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">
                             Hecho con{" "}
                             <Heart className="w-3 h-3 text-lime animate-pulse fill-lime/20" />{" "}
                             por Yilin Zhou
                         </p>
-                        <p className="text-beige/20 text-[9px] font-mono">
-                            &copy; Hecho y diseñado por Yilin Zhou en{" "}
+                        <p className="text-beige/20 text-[12px] font-mono">
+                            &copy; Creado y diseñado por Yilin Zhou en{" "}
                             {currentYear}
                         </p>
                     </div>
