@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Cursor from "@/components/Cursor";
 
 const nunito = Nunito({
     variable: "--font-heading",
@@ -10,13 +11,11 @@ const nunito = Nunito({
     weight: ["600", "700", "800"],
 });
 
-// 2. Geist Sans (Para el texto normal)
 const geistSans = Geist({
     variable: "--font-sans",
     subsets: ["latin"],
 });
 
-// 3. Geist Mono (Para código y números)
 const geistMono = Geist_Mono({
     variable: "--font-mono",
     subsets: ["latin"],
@@ -41,6 +40,7 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} antialiased bg-background text-foreground`}
             >
+                <Cursor />
                 <Header />
                 {children}
                 <Footer />

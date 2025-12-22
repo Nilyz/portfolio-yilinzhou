@@ -32,4 +32,7 @@
     body {
         @apply bg-background text-foreground antialiased;
     }
+    body, a, button, input {
+      cursor: none; 
+    }
 }

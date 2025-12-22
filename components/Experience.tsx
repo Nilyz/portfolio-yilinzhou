@@ -77,7 +77,7 @@ export default function Journey() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.2 }}
                             viewport={{ once: true }}
-                            className={`group relative z-10 w-full md:max-w-[320px] p-8 rounded-[2.5rem] shadow-xl border-none transition-all hover:scale-[1.05] hover:-translate-y-2 duration-300 flex flex-col cursor-pointer ${event.styles}`}
+                            className={`group relative z-10 w-full md:max-w-[320px] p-8 rounded-[2.5rem] shadow-xl border-none transition-all hover:scale-[1.05] hover:-translate-y-2 duration-300 flex flex-col ${event.styles}`}
                         >
                             <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <ArrowUpRight className="w-5 h-5 text-dark/40" />
