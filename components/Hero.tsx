@@ -94,13 +94,13 @@ export default function Hero() {
             <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{
-                    duration: 2,
+                    duration: 1.5,
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
             >
-                <div className="w-[1px] h-14 rounded-full bg-gradient-to-b from-sage to-transparent" />
+                <div className="w-[1px] h-14 rounded-full bg-gradient-to-b from-lime to-transparent" />
             </motion.div>
         </div>
     );

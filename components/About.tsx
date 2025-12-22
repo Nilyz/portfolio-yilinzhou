@@ -41,7 +41,7 @@ export default function About() {
                         {/* Contenedor de imagen con sombra Sage estilo glow */}
                         <div className="relative overflow-hidden rounded-[2.8rem] border border-sage/20 bg-card aspect-[4/5] shadow-2xl shadow-sage/20 hover:shadow-sage/50 transition-all duration-500">
                             <Image
-                                src="/YilinZhou_photo.jpg"
+                                src="/yilin_photo.jpg"
                                 alt="Yilin Zhou"
                                 fill
                                 className="object-cover"
