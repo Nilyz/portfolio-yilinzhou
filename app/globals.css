@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-dark: #131313;
-  --color-beige: #fff9eb;
-  --color-sage: #b5c49d;
-  --color-lime: #c5e284;
-  --color-soft-grey: #efefef;
+    --color-dark: #131313;
+    --color-beige: #fff9eb;
+    --color-sage: #b5c49d;
+    --color-lime: #c5e284;
+    --color-soft-grey: #efefef;
 
-  --color-background: var(--color-dark);
-  --color-foreground: var(--color-beige);
-  --color-primary: var(--color-lime); 
-  --color-card: #1a1a1a;
-  --color-border: rgba(181, 196, 157, 0.2); 
+    --color-background: var(--color-dark);
+    --color-foreground: var(--color-beige);
+    --color-primary: var(--color-lime);
+    --color-card: #1a1a1a;
+    --color-border: rgba(181, 196, 157, 0.2);
+
+    /* Títulos grandes -> Nunito */
+    --font-heading: var(--font-heading), ui-sans-serif, system-ui;
+
+    /* Texto normal -> Geist Sans */
+    --font-sans: var(--font-sans), ui-sans-serif, system-ui;
+
+    /* Código/Números -> Geist Mono */
+    --font-mono: var(--font-mono), ui-monospace, SFMono-Regular;
 }
 
 :root {
-  --background: #131313;
-  --foreground: #fff9eb;
+    --background: #131313;
+    --foreground: #fff9eb;
 }
 
 @layer base {
-  body {
-    @apply bg-background text-foreground antialiased;
-  }
+    body {
+        @apply bg-background text-foreground antialiased;
+    }
 }

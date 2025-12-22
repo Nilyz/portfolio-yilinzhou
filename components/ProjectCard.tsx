@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, Terminal } from "lucide-react";
 import Image from "next/image";
 
+// Interfaz definida localmente para evitar errores
 interface Project {
     title: string;
     description: string;
@@ -45,6 +46,7 @@ export function ProjectCard({
                     </span>
                 </div>
             </div>
+
             {/* CONTENEDOR DE IMAGEN PREVIEW */}
             <div className="relative h-80 w-full overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent z-10 opacity-80" />
@@ -56,7 +58,7 @@ export function ProjectCard({
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
 
-                {/* Enlaces flotantes con estilo Sage */}
+                {/* Enlaces flotantes */}
                 <div className="absolute top-4 right-4 z-20 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
                     <a
                         href={project.github}
@@ -79,11 +81,12 @@ export function ProjectCard({
             <div className="p-7 flex-grow flex flex-col">
                 <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
-                        <span className="text-sage text-[10px] font-bold uppercase tracking-widest bg-sage/5 px-2 py-0.5 rounded border border-sage/10">
+                        <span className="text-sage text-[10px] font-mono font-bold uppercase tracking-widest bg-sage/5 px-2 py-0.5 rounded border border-sage/10">
                             {project.type}
                         </span>
                     </div>
-                    <h3 className="text-xl font-bold text-beige group-hover:text-lime transition-colors duration-300">
+
+                    <h3 className="font-heading text-xl font-bold text-beige group-hover:text-lime transition-colors duration-300">
                         {project.title}
                     </h3>
                 </div>
@@ -92,7 +95,7 @@ export function ProjectCard({
                     {project.description}
                 </p>
 
-                {/* TECNOLOGÍAS*/}
+                {/* TECNOLOGÍAS */}
                 <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tech.map((t) => (
                         <span

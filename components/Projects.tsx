@@ -13,7 +13,7 @@ export default function Projects() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4 mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-beige tracking-tighter">
+                    <h2 className="font-heading text-3xl md:text-4xl font-bold text-beige tracking-tighter">
                         <span className="text-lime font-mono text-2xl mr-2">04.</span>
                         Proyectos Destacados
                     </h2>

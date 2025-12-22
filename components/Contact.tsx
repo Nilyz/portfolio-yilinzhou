@@ -14,7 +14,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4 mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-beige tracking-tighter">
+                    <h2 className="font-heading text-3xl md:text-4xl font-bold text-beige tracking-tighter">
                         <span className="text-lime font-mono text-2xl mr-2">
                             05.
                         </span>
@@ -35,7 +35,7 @@ export default function Contact() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="text-left space-y-6">
-                            <h3 className="text-2xl font-bold text-beige tracking-tight">
+                            <h3 className="font-heading text-2xl font-bold text-beige tracking-tight">
                                 ¿Hablamos?
                             </h3>
                             <p className="text-beige/50 text-sm leading-relaxed">
@@ -48,7 +48,7 @@ export default function Contact() {
                             {/* Botón de enviar email*/}
                             <a
                                 href="mailto:tu-email@ejemplo.com"
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-lime text-dark font-black rounded-full hover:scale-105 transition-all group shadow-lg shadow-lime/20"
+                                className="font-heading inline-flex items-center gap-3 px-8 py-4 bg-lime text-dark font-black rounded-full hover:scale-105 transition-all group shadow-lg shadow-lime/20"
                             >
                                 Enviar Email
                                 <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -110,11 +110,11 @@ function SocialLink({
             download={isDownload}
             className={`flex items-center gap-4 p-4 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 group text-left ${hoverClass} hover:scale-[1.02]`}
         >
-            <div className="p-2.5 bg-white/5 rounded-xl text-sage group-hover:text-dark group-hover:bg-dark/10 transition-colors">
+            <div className="p-2.5 bg-white/5 rounded-xl text-lime group-hover:text-dark group-hover:bg-dark/10 transition-colors">
                 {icon}
             </div>
             <div>
-                <p className="text-beige font-bold text-sm group-hover:text-dark transition-colors">
+                <p className="font-heading text-beige font-bold text-sm group-hover:text-dark transition-colors">
                     {label}
                 </p>
                 <p className="text-beige/30 text-[10px] uppercase tracking-wider font-mono group-hover:text-dark/60 transition-colors">

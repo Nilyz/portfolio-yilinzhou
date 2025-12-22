@@ -17,7 +17,7 @@ const events = [
         year: "2023 - 2025",
         title: "Desarrollo Multiplataforma",
         desc: "Grado Superior en Desarrollo Multiplataforma, reforzando la programación orientada a objetos, el desarrollo de aplicaciones y las bases de sistemas y bases de datos.",
-        link: "https://www.linkedin.com/in/yilinzzhou/details/education/",
+        link: "https://www.linkedin.com/in/yilinzzhou/details/education/", 
         icon: <GraduationCap className="w-5 h-5" />,
         styles: "bg-beige text-dark shadow-beige/10",
         accent: "text-dark/60",
@@ -26,7 +26,7 @@ const events = [
         year: "Hoy",
         title: "Especialización en IA & Big Data",
         desc: "Formación en Big Data e Inteligencia Artificial, incluyendo modelos de lenguaje, técnicas de recuperación de información (RAG) y procesamiento de grandes volúmenes de datos.",
-        link: "https://www.linkedin.com/in/yilinzzhou/details/education/", 
+        link: "#https://www.linkedin.com/in/yilinzzhou/details/education/", 
         icon: <Sparkles className="w-5 h-5" />,
         styles: "bg-sage text-dark shadow-sage/10",
         accent: "text-dark/60",
@@ -43,7 +43,7 @@ export default function Journey() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4 mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-beige tracking-tighter">
+                    <h2 className="font-heading text-3xl md:text-4xl font-bold text-beige tracking-tighter">
                         <span className="text-lime font-mono text-2xl mr-2">
                             02.
                         </span>
@@ -93,7 +93,7 @@ export default function Journey() {
                                 {event.year}
                             </span>
 
-                            <h3 className="text-dark font-black text-lg mt-1 tracking-tight leading-tight">
+                            <h3 className="font-heading text-dark font-black text-lg mt-1 tracking-tight leading-tight">
                                 {event.title}
                             </h3>
 

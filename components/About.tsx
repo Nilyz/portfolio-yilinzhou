@@ -17,7 +17,7 @@ export default function About() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4 mb-20"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-beige tracking-tighter">
+                    <h2 className="font-heading text-3xl md:text-4xl font-bold text-beige tracking-tighter">
                         <span className="text-lime font-mono text-2xl mr-2">
                             01.
                         </span>
@@ -37,6 +37,8 @@ export default function About() {
                     >
                         {/* Marco decorativo */}
                         <div className="absolute top-6 left-6 w-full h-full border-2 border-sage/10 rounded-[3rem] -z-10 group-hover:top-4 group-hover:left-4 transition-all duration-500"></div>
+
+                        {/* Contenedor de imagen con sombra Sage estilo glow */}
                         <div className="relative overflow-hidden rounded-[2.8rem] border border-sage/20 bg-card aspect-[4/5] shadow-2xl shadow-sage/20 hover:shadow-sage/50 transition-all duration-500">
                             <Image
                                 src="/YilinZhou_photo.jpg"
@@ -56,7 +58,7 @@ export default function About() {
                         className="flex flex-col justify-center"
                     >
                         <motion.h3
-                            className="text-5xl md:text-6xl font-bold text-lime mb-8 tracking-tighter"
+                            className="font-heading text-5xl md:text-6xl font-bold text-lime mb-8 tracking-tighter"
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.2 }}
@@ -104,8 +106,7 @@ export default function About() {
                                 </p>
                             </div>
 
-                            {/* Tags de Resumen */}
-                            <div className="flex gap-3 pt-4">
+                            <div className="flex gap-3 pt-4 flex-wrap">
                                 <span className="px-4 py-1.5 rounded-full border border-sage/20 bg-sage/5 text-sage text-xs font-mono">
                                     + Multiplatform Dev
                                 </span>

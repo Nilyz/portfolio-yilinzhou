@@ -8,8 +8,16 @@ const skillCategories = [
         title: "UX/UI & Frontend",
         icon: <Layout className="w-4 h-4" />,
         skills: [
-            "HTML5", "CSS3", "JavaScript", "TypeScript", "React", 
-            "Next.js", "Angular", "Svelte", "Tailwind CSS", "Bootstrap", "Figma"
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Angular",
+            "Svelte",
+            "Bootstrap",
+            "Figma",
         ],
         className: "md:col-span-6",
     },
@@ -17,8 +25,15 @@ const skillCategories = [
         title: "Software & Backend",
         icon: <Code2 className="w-4 h-4" />,
         skills: [
-            "Java", "Kotlin", "Python", "PHP", "Node.js", 
-            "Express", "API REST", "Git", "GitHub", "AWS Foundations", "Docker"
+            "Java",
+            "Kotlin",
+            "Python",
+            "PHP",
+            "Node.js",
+            "Express",
+            "API REST",
+            "Git",
+            "GitHub",
         ],
         className: "md:col-span-4",
     },
@@ -26,8 +41,18 @@ const skillCategories = [
         title: "Data Engineering",
         icon: <Database className="w-4 h-4" />,
         skills: [
-            "MySQL", "PostgreSQL", "MongoDB", "Firebase", "Power BI", 
-            "PySpark", "DataBricks", "Pandas", "NumPy", "Matplotlib", "Seaborn", "R"
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Firebase",
+            "Power BI",
+            "PySpark",
+            "DataBricks",
+            "Pandas",
+            "NumPy",
+            "Matplotlib",
+            "Seaborn",
+            "R",
         ],
         className: "md:col-span-4",
     },
@@ -35,8 +60,15 @@ const skillCategories = [
         title: "AI & Intelligence",
         icon: <BrainCircuit className="w-4 h-4" />,
         skills: [
-            "Python", "TensorFlow", "LLMs", "LangChain", "RAG", 
-            "Llama 3", "Gemini API", "Prompt Engineering", "Scikit-Learn"
+            "Python",
+            "TensorFlow",
+            "LLMs",
+            "LangChain",
+            "RAG",
+            "Llama 3",
+            "Gemini API",
+            "Prompt Engineering",
+            "Scikit-Learn",
         ],
         className: "md:col-span-6",
     },
@@ -52,7 +84,8 @@ export default function Skills() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4 mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-beige tracking-tighter">
+                    {/* TÍTULO DE SECCIÓN*/}
+                    <h2 className="font-heading text-3xl md:text-4xl font-bold text-beige tracking-tighter">
                         <span className="text-lime font-mono text-2xl mr-2">
                             03.
                         </span>
@@ -70,29 +103,26 @@ export default function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
                             viewport={{ once: true }}
-                            className={`p-8 rounded-[2rem] border border-sage/10 bg-card/60 backdrop-blur-sm ${cat.className} transition-colors duration-500 hover:border-sage/30 shadow-xl shadow-sage/3 flex flex-col`}
+                            className={`p-8 rounded-[2rem] border border-sage/10 bg-card/60 backdrop-blur-sm ${cat.className} transition-colors duration-500 hover:border-sage/30 shadow-xl shadow-sage/5 flex flex-col`}
                         >
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="p-2.5 bg-background border border-sage/10 rounded-xl text-lime">
                                     {cat.icon}
                                 </div>
-                                <h3 className="text-beige font-bold text-lg tracking-tight">
+                                <h3 className="font-heading text-beige font-bold text-lg tracking-tight">
                                     {cat.title}
                                 </h3>
                             </div>
 
-                            {/* CAMBIO AQUÍ: justify-between para distribuir los tags */}
-                            <div className="flex flex-wrap gap-y-3 justify-between">
+                            <div className="flex flex-wrap gap-2">
                                 {cat.skills.map((skill) => (
                                     <span
                                         key={skill}
-                                        className="px-4 py-1.5 bg-background/50 border border-sage/5 text-beige/70 text-sm font-mono rounded-full hover:border-sage/40 hover:text-sage transition-all duration-300"
+                                        className="px-4 py-1.5 bg-background/50 border border-sage/5 text-beige/70 text-sm font-mono rounded-full hover:border-sage/40 hover:text-sage hover:bg-sage/5 transition-all duration-300 cursor-default"
                                     >
                                         {skill}
                                     </span>
                                 ))}
-                                {/* Elemento invisible para ayudar a la distribución si la última fila tiene pocos items */}
-                                <div className="flex-grow h-0" />
                             </div>
                         </motion.div>
                     ))}

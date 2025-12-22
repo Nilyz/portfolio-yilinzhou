@@ -13,7 +13,8 @@ export default function Footer() {
                     {/* Identidad con toque AI */}
                     <div className="flex flex-col items-center md:items-start gap-2">
                         <div className="flex items-center gap-2 group cursor-default">
-                            <span className="text-xl font-bold text-beige tracking-tighter">
+                            {/* LOGO: font-heading para personalidad de marca */}
+                            <span className="font-heading text-xl font-bold text-beige tracking-tighter">
                                 <span className="text-lime">{"<"}</span> Yilin
                                 Zhou <span className="text-lime">{"/>"}</span>
                             </span>
@@ -23,8 +24,8 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Navegación Minimalista */}
-                    <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-medium text-beige/50">
+                    {/* Navegación Minimalista: font-heading para coherencia con los botones */}
+                    <nav className="font-heading flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-bold text-beige/50">
                         <a
                             href="#about"
                             className="hover:text-lime transition-colors duration-300"
@@ -80,7 +81,7 @@ export default function Footer() {
                         />
                     </div>
 
-                    {/* Credits */}
+                    {/* Credits: Se mantiene font-mono para firma técnica */}
                     <div className="flex flex-col items-center md:items-end gap-1">
                         <p className="text-beige/30 text-[14px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">
                             Hecho con{" "}

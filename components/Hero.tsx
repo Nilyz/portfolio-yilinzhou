@@ -19,7 +19,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-lime md:text-sm uppercase tracking-[0.4em] mb-4"
+                    className="font-mono text-lime md:text-sm uppercase tracking-[0.4em] mb-4"
                 >
                     Hola, soy
                 </motion.span>
@@ -28,7 +28,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-6xl md:text-9xl font-black tracking-tighter text-beige mb-4"
+                    className="font-heading text-6xl md:text-9xl font-black tracking-tighter text-beige mb-4"
                 >
                     Yilin Zhou
                 </motion.h1>
@@ -37,7 +37,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="text-2xl md:text-4xl font-bold text-lime/90 tracking-tight mb-6"
+                    className="font-heading text-2xl md:text-4xl font-bold text-lime/90 tracking-tight mb-6"
                 >
                     Desarrolladora Full Stack{" "}
                     <span className="text-beige">·</span> IA & Big Data
@@ -51,7 +51,7 @@ export default function Hero() {
                 >
                     Desarrolladora{" "}
                     <span className="text-sage/90 font-semibold ">
-                        multiplataforma
+                        Full Stack
                     </span>{" "}
                     con pasión por el diseño UX/UI, actualmente especializándome
                     como estudiante de
@@ -70,7 +70,7 @@ export default function Hero() {
                 >
                     <a
                         href="#projects"
-                        className="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-dark transition-all duration-300 bg-lime rounded-full hover:scale-105 shadow-[0_0_30px_rgba(197,226,132,0.25)]"
+                        className="pointer-events-auto font-heading group relative inline-flex items-center justify-center px-10 py-4 font-bold text-dark transition-all duration-300 bg-lime rounded-full hover:scale-105 shadow-[0_0_30px_rgba(197,226,132,0.25)]"
                     >
                         Explorar mi trabajo
                         <svg
