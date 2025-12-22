@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, Terminal } from "lucide-react";
 import Image from "next/image";
 
-// Interfaz definida localmente para evitar errores
 interface Project {
     title: string;
     description: string;
@@ -28,10 +27,10 @@ export function ProjectCard({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group relative bg-card border border-sage/10 rounded-[2rem] overflow-hidden flex flex-col h-full shadow-2xl hover:border-sage/40 transition-all duration-500 shadow-xl shadow-sage/3"
+            className="group relative bg-card/60 border border-sage/10 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex flex-col h-full shadow-2xl hover:border-sage/40 transition-all duration-500 shadow-xl shadow-sage/3"
         >
             {/* CABECERA ESTILO TERMINAL */}
-            <div className="bg-background/50 px-5 py-4 border-b border-sage/5 flex items-center justify-between backdrop-blur-sm ">
+            <div className="bg-background/50 px-4 py-3 md:px-5 md:py-4 border-b border-sage/5 flex items-center justify-between backdrop-blur-sm ">
                 <div className="flex gap-1.5">
                     <div className="w-2.5 h-2.5 rounded-full bg-red-400/30 group-hover:bg-red-400/70 transition-colors duration-300" />
                     <div className="w-2.5 h-2.5 rounded-full bg-amber-400/30 group-hover:bg-amber-400/70 transition-colors duration-300" />
@@ -48,18 +47,19 @@ export function ProjectCard({
             </div>
 
             {/* CONTENEDOR DE IMAGEN PREVIEW */}
-            <div className="relative h-80 w-full overflow-hidden">
+            <div className="relative h-56 md:h-80 w-full overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent z-10 opacity-80" />
 
                 <Image
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
 
-                {/* Enlaces flotantes */}
-                <div className="absolute top-4 right-4 z-20 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                {/* Enlaces flotantes*/}
+                <div className="absolute top-4 right-4 z-20 flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500">
                     <a
                         href={project.github}
                         target="_blank"
@@ -78,7 +78,7 @@ export function ProjectCard({
             </div>
 
             {/* CONTENIDO DE LA TARJETA */}
-            <div className="p-7 flex-grow flex flex-col">
+            <div className="p-5 md:p-7 flex-grow flex flex-col">
                 <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
                         <span className="text-sage text-[10px] font-mono font-bold uppercase tracking-widest bg-sage/5 px-2 py-0.5 rounded border border-sage/10">

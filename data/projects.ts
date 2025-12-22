@@ -54,7 +54,7 @@ export const PROJECTS: Project[] = [
         image: "/onitime_preview.png",
     },
     {
-        title: "Tienda de Pastelería en React",
+        title: "Pastelería con React",
         description:
             "Sitio web para una pastelería en línea, que permite explorar productos y realizar compras con una experiencia de usuario amigable, inspirada en un estilo asiático acogedor y visualmente atractivo.",
         tech: [

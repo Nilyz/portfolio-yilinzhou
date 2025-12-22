@@ -6,26 +6,31 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="w-full bg-dark border-t border-white/5 py-12 px-6">
+        <footer className="w-full bg-dark border-t border-white/5 py-8 md:py-12 px-6">
             <div className="max-w-6xl mx-auto">
                 {/* PARTE SUPERIOR: Logo y Navegación */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-                    {/* Identidad con toque AI */}
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 mb-8 md:mb-12">
                     <div className="flex flex-col items-center md:items-start gap-2">
                         <div className="flex items-center gap-2 group cursor-default">
-                            {/* LOGO: font-heading para personalidad de marca */}
-                            <span className="font-heading text-xl font-bold text-beige tracking-tighter">
-                                <span className="text-lime">{"<"}</span> Yilin
-                                Zhou <span className="text-lime">{"/>"}</span>
-                            </span>
+                            <a
+                                href="#"
+                                className="flex items-center gap-2 cursor-pointer"
+                            >
+                                <span className="font-heading text-lg md:text-xl font-bold text-beige tracking-tighter hover:text-sage transition-colors duration-300">
+                                    <span className="text-lime">{"<"}</span>{" "}
+                                    Yilin Zhou{" "}
+                                    <span className="text-lime">{"/>"}</span>
+                                </span>
+                            </a>
                         </div>
-                        <p className="text-beige/40 text-[11px] font-mono uppercase tracking-widest">
+                        <p className="text-beige/40 text-[10px] md:text-[11px] font-mono uppercase tracking-widest">
                             Desarrolladora Full Stack · IA & Big Data
                         </p>
                     </div>
 
-                    {/* Navegación Minimalista: font-heading para coherencia con los botones */}
-                    <nav className="font-heading flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-bold text-beige/50">
+                    {/* Navegación Minimalista */}
+                    <nav className="font-heading flex flex-wrap justify-center gap-x-6 md:gap-x-8 gap-y-2 text-xs md:text-sm font-bold text-beige/50">
+                        {" "}
                         <a
                             href="#about"
                             className="hover:text-lime transition-colors duration-300"
@@ -44,7 +49,6 @@ export default function Footer() {
                         >
                             Tecnologías
                         </a>
-
                         <a
                             href="#contact"
                             className="hover:text-lime transition-colors duration-300"
@@ -55,14 +59,14 @@ export default function Footer() {
                 </div>
 
                 {/* SEPARADOR ESTILO TRAYECTORIA */}
-                <div className="flex items-center gap-4 mb-12 opacity-20">
+                <div className="flex items-center gap-4 mb-8 md:mb-12 opacity-20">
                     <div className="h-[1px] bg-sage flex-grow" />
                     <div className="w-2 h-2 rounded-full bg-lime" />
                     <div className="h-[1px] bg-sage flex-grow" />
                 </div>
 
                 {/* PARTE INFERIOR: RRSS y Copyright */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
                     <div className="flex gap-3">
                         <FooterSocialIcon
                             href="https://github.com/Nilyz"
@@ -81,14 +85,14 @@ export default function Footer() {
                         />
                     </div>
 
-                    {/* Credits: Se mantiene font-mono para firma técnica */}
+                    {/* Credits */}
                     <div className="flex flex-col items-center md:items-end gap-1">
-                        <p className="text-beige/30 text-[14px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">
+                        <p className="text-beige/30 text-[12px] md:text-[14px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">
                             Hecho con{" "}
                             <Heart className="w-3 h-3 text-lime animate-pulse fill-lime/20" />{" "}
                             por Yilin Zhou
                         </p>
-                        <p className="text-beige/20 text-[12px] font-mono">
+                        <p className="text-beige/20 text-[10px] md:text-[12px] font-mono">
                             &copy; Creado y diseñado por Yilin Zhou en{" "}
                             {currentYear}
                         </p>
@@ -99,7 +103,6 @@ export default function Footer() {
     );
 }
 
-// Sub-componente para iconos sociales limpios
 function FooterSocialIcon({
     href,
     icon,

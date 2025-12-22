@@ -14,12 +14,11 @@ export default function Hero() {
             <div className="absolute inset-0 w-full h-full z-0 pointer-events-none bg-gradient-to-t from-dark via-transparent to-transparent" />
 
             <div className="relative z-10 flex flex-col items-center">
-                {/* 1. "Hola, soy" (Pequeño y en fuente mono para el toque tech) */}
                 <motion.span
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="font-mono text-lime md:text-sm uppercase tracking-[0.4em] mb-4"
+                    className="font-mono text-lime text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.4em] mb-4"
                 >
                     Hola, soy
                 </motion.span>
@@ -28,7 +27,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="font-heading text-6xl md:text-9xl font-black tracking-tighter text-beige mb-4"
+                    className="font-heading text-5xl md:text-9xl font-black tracking-tighter text-beige mb-4 md:mb-6"
                 >
                     Yilin Zhou
                 </motion.h1>
@@ -37,17 +36,20 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="font-heading text-2xl md:text-4xl font-bold text-lime/90 tracking-tight mb-6"
+                    className="font-heading text-xl md:text-4xl font-bold text-lime/90 tracking-tight mb-6 leading-tight max-w-md md:max-w-none"
                 >
                     Desarrolladora Full Stack{" "}
-                    <span className="text-beige">·</span> IA & Big Data
+                    <span className="text-beige hidden md:inline">·</span>{" "}
+                    <span className="block md:inline text-beige/80 md:text-lime/90 mt-1 md:mt-0">
+                        IA & Big Data
+                    </span>
                 </motion.h2>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="max-w-lg text-base md:text-lg text-beige/60 leading-relaxed mb-10"
+                    className="max-w-xs md:max-w-lg text-sm md:text-lg text-beige/70 leading-relaxed mb-8 md:mb-10"
                 >
                     Desarrolladora{" "}
                     <span className="text-sage/90 font-semibold ">
@@ -62,7 +64,7 @@ export default function Hero() {
                     .
                 </motion.p>
 
-                {/* Botón de acción con sombra Lime */}
+                {/* Botón de acción*/}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -70,11 +72,11 @@ export default function Hero() {
                 >
                     <a
                         href="#projects"
-                        className="pointer-events-auto font-heading group relative inline-flex items-center justify-center px-10 py-4 font-bold text-dark transition-all duration-300 bg-lime rounded-full hover:scale-105 shadow-[0_0_30px_rgba(197,226,132,0.25)]"
+                        className="pointer-events-auto font-heading group relative inline-flex items-center justify-center px-8 py-3 md:px-10 md:py-4 font-bold text-dark transition-all duration-300 bg-beige rounded-full hover:scale-105 shadow-lg shadow-beige/20 hover:bg-lime hover:shadow-lime/20 text-sm md:text-base"
                     >
                         Explorar mi trabajo
                         <svg
-                            className="w-5 h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                            className="w-4 h-4 md:w-5 md:h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -90,7 +92,7 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* Indicador de scroll animado */}
+            {/* Indicador de scroll animado*/}
             <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{
@@ -98,9 +100,9 @@ export default function Hero() {
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+                className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-10"
             >
-                <div className="w-[1px] h-14 rounded-full bg-gradient-to-b from-lime to-transparent" />
+                <div className="w-[1px] h-10 md:h-14 rounded-full bg-gradient-to-b from-lime to-transparent" />
             </motion.div>
         </div>
     );

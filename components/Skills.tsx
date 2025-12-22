@@ -8,16 +8,8 @@ const skillCategories = [
         title: "UX/UI & Frontend",
         icon: <Layout className="w-4 h-4" />,
         skills: [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "TypeScript",
-            "React",
-            "Next.js",
-            "Angular",
-            "Svelte",
-            "Bootstrap",
-            "Figma",
+            "HTML", "CSS", "JavaScript", "TypeScript", "React",
+            "Next.js", "Angular", "Svelte", "Bootstrap", "Figma",
         ],
         className: "md:col-span-6",
     },
@@ -25,15 +17,8 @@ const skillCategories = [
         title: "Software & Backend",
         icon: <Code2 className="w-4 h-4" />,
         skills: [
-            "Java",
-            "Kotlin",
-            "Python",
-            "PHP",
-            "Node.js",
-            "Express",
-            "API REST",
-            "Git",
-            "GitHub",
+            "Java", "Kotlin", "Python", "PHP", "Node.js",
+            "Express", "API REST", "Git", "GitHub",
         ],
         className: "md:col-span-4",
     },
@@ -41,18 +26,8 @@ const skillCategories = [
         title: "Data Engineering",
         icon: <Database className="w-4 h-4" />,
         skills: [
-            "MySQL",
-            "PostgreSQL",
-            "MongoDB",
-            "Firebase",
-            "Power BI",
-            "PySpark",
-            "DataBricks",
-            "Pandas",
-            "NumPy",
-            "Matplotlib",
-            "Seaborn",
-            "R",
+            "MySQL", "PostgreSQL", "MongoDB", "Firebase", "Power BI",
+            "PySpark", "DataBricks", "Pandas", "NumPy", "Matplotlib", "Seaborn", "R",
         ],
         className: "md:col-span-4",
     },
@@ -60,15 +35,8 @@ const skillCategories = [
         title: "AI & Intelligence",
         icon: <BrainCircuit className="w-4 h-4" />,
         skills: [
-            "Python",
-            "TensorFlow",
-            "LLMs",
-            "LangChain",
-            "RAG",
-            "Llama 3",
-            "Gemini API",
-            "Prompt Engineering",
-            "Scikit-Learn",
+            "Python", "TensorFlow", "LLMs", "LangChain", "RAG",
+            "Llama 3", "Gemini API", "Prompt Engineering", "Scikit-Learn",
         ],
         className: "md:col-span-6",
     },
@@ -82,19 +50,17 @@ export default function Skills() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-4 mb-16"
+                    className="flex items-center gap-4 mb-10 md:mb-16"
                 >
-                    {/* TÍTULO DE SECCIÓN*/}
-                    <h2 className="font-heading text-3xl md:text-4xl font-bold text-beige tracking-tighter">
-                        <span className="text-lime font-mono text-2xl mr-2">
+                    <h2 className="font-heading text-2xl md:text-4xl font-bold text-beige tracking-tighter">
+                        <span className="text-lime font-mono text-xl md:text-2xl mr-2">
                             03.
                         </span>
                         Tecnologías y Habilidades
                     </h2>
-                    <div className="h-[1px] bg-sage/10 flex-grow" />
+                    <div className="h-[1.5px] bg-sage/10 flex-grow" />
                 </motion.div>
 
-                {/* Grid de 10 columnas para proporciones 6/4 */}
                 <div className="grid grid-cols-1 md:grid-cols-10 gap-6">
                     {skillCategories.map((cat, i) => (
                         <motion.div
@@ -103,7 +69,7 @@ export default function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
                             viewport={{ once: true }}
-                            className={`p-8 rounded-[2rem] border border-sage/10 bg-card/60 backdrop-blur-sm ${cat.className} transition-colors duration-500 hover:border-sage/30 shadow-xl shadow-sage/5 flex flex-col`}
+                            className={`p-6 md:p-8 rounded-[2rem] border border-sage/10 bg-card/60 backdrop-blur-sm ${cat.className} transition-colors duration-500 hover:border-sage/30 shadow-xl shadow-sage/5 flex flex-col`}
                         >
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="p-2.5 bg-background border border-sage/10 rounded-xl text-lime">
