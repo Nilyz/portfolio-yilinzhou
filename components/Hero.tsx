@@ -13,7 +13,8 @@ export default function Hero() {
             {/* Gradiente de profundidad para fundir con el fondo dark */}
             <div className="absolute inset-0 w-full h-full z-0 pointer-events-none bg-gradient-to-t from-dark via-transparent to-transparent" />
 
-            <div className="relative z-10 flex flex-col items-center">
+            <div className="relative z-10 flex flex-col items-center -mt-20 md:mt-0">
+                {" "}
                 <motion.span
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -22,7 +23,6 @@ export default function Hero() {
                 >
                     Hola, soy
                 </motion.span>
-
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,6 @@ export default function Hero() {
                 >
                     Yilin Zhou
                 </motion.h1>
-
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -44,13 +43,11 @@ export default function Hero() {
                         IA & Big Data
                     </span>
                 </motion.h2>
-
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="max-w-xs md:max-w-lg text-sm md:text-lg text-beige/70 leading-relaxed mb-8 md:mb-10"
-                >
+className="max-w-xs md:max-w-lg text-sm md:text-lg text-beige/70 leading-relaxed mb-12 md:mb-10"                >
                     Desarrolladora{" "}
                     <span className="text-sage/90 font-semibold ">
                         Full Stack
@@ -63,18 +60,17 @@ export default function Hero() {
                     </span>
                     .
                 </motion.p>
-
                 {/* Grupo de Botones */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    className="flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full md:w-auto"
+                    className="flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full max-w-xs md:max-w-none md:w-auto"
                 >
-                    {/* Botón Principal*/}
+                    {/* Botón Principal */}
                     <a
                         href="#projects"
-                        className="pointer-events-auto font-heading group relative inline-flex items-center justify-center px-8 py-3 md:px-10 md:py-4 font-bold text-dark transition-all duration-300 bg-beige rounded-full hover:scale-105 shadow-lg shadow-beige/20 hover:bg-lime hover:shadow-lime/20 text-sm md:text-base"
+                        className="w-full md:w-auto pointer-events-auto font-heading group relative inline-flex items-center justify-center px-8 py-3 md:px-10 md:py-4 font-bold text-dark transition-all duration-300 bg-beige rounded-full hover:scale-105 shadow-lg shadow-beige/20 hover:bg-lime hover:shadow-lime/20 text-sm md:text-base"
                     >
                         Explorar mi trabajo
                         <svg
@@ -92,7 +88,7 @@ export default function Hero() {
                         </svg>
                     </a>
 
-                    {/*Botón CV*/}
+                    {/* Botón CV */}
                     <a
                         href="/YilinZhou_cv.pdf"
                         target="_blank"

@@ -38,25 +38,25 @@ export default function Cursor() {
     return (
         <>
             <motion.div
-                className="fixed top-0 left-0 w-3 h-3 bg-lime rounded-full pointer-events-none z-[9999] mix-blend-difference"
+                className="hidden md:block fixed top-0 left-0 w-3 h-3 bg-lime rounded-full pointer-events-none z-[9999] mix-blend-difference"
                 animate={{
-                    x: mousePosition.x - 6, 
+                    x: mousePosition.x - 6,
                     y: mousePosition.y - 6,
-                    scale: isHovering ? 0 : 1, 
+                    scale: isHovering ? 0 : 1,
                 }}
                 transition={{ type: "tween", ease: "backOut", duration: 0 }}
             />
 
             <motion.div
-                className="fixed top-0 left-0 w-8 h-8 border border-lime rounded-full pointer-events-none z-[9998]"
+                className="hidden md:block fixed top-0 left-0 w-8 h-8 border border-lime rounded-full pointer-events-none z-[9998]"
                 animate={{
-                    x: mousePosition.x - 16, 
+                    x: mousePosition.x - 16,
                     y: mousePosition.y - 16,
-                    scale: isHovering ? 1.5 : 1, 
+                    scale: isHovering ? 1.5 : 1,
                     backgroundColor: isHovering
                         ? "rgba(197, 226, 132, 0.1)"
-                        : "transparent", 
-                    borderColor: isHovering ? "transparent" : "#c5e284", 
+                        : "transparent",
+                    borderColor: isHovering ? "transparent" : "#c5e284",
                 }}
                 transition={{
                     type: "spring",
