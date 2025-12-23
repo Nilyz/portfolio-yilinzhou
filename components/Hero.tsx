@@ -64,12 +64,14 @@ export default function Hero() {
                     .
                 </motion.p>
 
-                {/* Botón de acción*/}
+                {/* Grupo de Botones */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
+                    className="flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full md:w-auto"
                 >
+                    {/* Botón Principal*/}
                     <a
                         href="#projects"
                         className="pointer-events-auto font-heading group relative inline-flex items-center justify-center px-8 py-3 md:px-10 md:py-4 font-bold text-dark transition-all duration-300 bg-beige rounded-full hover:scale-105 shadow-lg shadow-beige/20 hover:bg-lime hover:shadow-lime/20 text-sm md:text-base"
@@ -88,6 +90,39 @@ export default function Hero() {
                                 d="M13 7l5 5m0 0l-5 5m5-5H6"
                             />
                         </svg>
+                    </a>
+
+                    {/*Botón CV*/}
+                    <a
+                        href="/YilinZhou_cv.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                        className="w-full md:w-auto pointer-events-auto group inline-flex items-center justify-center px-8 py-3 md:px-6 md:py-4 border border-beige/30 rounded-full text-beige hover:bg-beige/10 hover:border-lime hover:text-lime transition-all duration-300 backdrop-blur-sm"
+                        aria-label="Descargar CV"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" x2="12" y1="15" y2="3" />
+                        </svg>
+
+                        <span className="md:hidden ml-2 font-heading font-bold text-sm">
+                            Descargar CV
+                        </span>
+                        <span className="hidden md:inline-block ml-2 font-heading font-bold text-sm">
+                            CV
+                        </span>
                     </a>
                 </motion.div>
             </div>
