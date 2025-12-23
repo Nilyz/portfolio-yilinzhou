@@ -35,7 +35,7 @@ const events = [
 
 export default function Journey() {
     return (
-        <section className="py-24 px-6 bg-dark overflow-hidden">
+        <section className="py-12 md:py-24 px-6 bg-dark overflow-hidden">
             <div className="max-w-6xl mx-auto relative">
                 <motion.div
                     initial={{ opacity: 0 }}
