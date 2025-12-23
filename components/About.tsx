@@ -93,24 +93,24 @@ export default function About() {
                                     Desarrollo de Aplicaciones Multiplataforma
                                 </span>
                                 . Para mí, crear software no es solo escribir
-                                código que funcione; es el arte de construir
+                                código que funcione, es el arte de construir
                                 interfaces bonitas, intuitivas y navegables.
                                 Creo firmemente que la experiencia del usuario
                                 es lo que realmente da vida a un proyecto.
                             </p>
 
                             <p className="text-beige/90 text-base md:text-lg leading-relaxed">
-                                Actualmente, estoy llevando esa sensibilidad por
-                                lo visual y la usabilidad al fascinante campo
-                                del
+                                Esa misma curiosidad me ha llevado ahora al
+                                mundo del{" "}
                                 <span className="text-sage font-semibold">
-                                    {" "}
-                                    Big Data y la IA
+                                    Big Data y la Inteligencia Artificial
                                 </span>
-                                . Mi meta es demostrar que el análisis de datos
-                                masivos no tiene por qué ser frío o complejo;
-                                puede transformarse en soluciones inteligentes
-                                que sigan siendo amables para quien las utiliza.
+                                . Me fascina descubrir qué esconden los datos,
+                                pero siempre manteniendo el foco en las
+                                personas. Mi reto es fusionar la lógica fría de
+                                los algoritmos con interfaces cálidas,
+                                demostrando que la tecnología más potente
+                                también puede ser fácil de usar.
                             </p>
 
                             <div className="pt-4">
