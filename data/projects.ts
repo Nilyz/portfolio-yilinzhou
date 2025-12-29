@@ -4,11 +4,30 @@ export interface Project {
     tech: string[];
     link: string;
     github: string;
-    type:  "AI" | "Big Data" | "Web App" | "Mobile App";
+    type: "AI" | "Big Data" | "Web App" | "Mobile App";
     image: string;
 }
 
 export const PROJECTS: Project[] = [
+    {
+        title: "TradeCore",
+        description:
+            "Dashboard financiero inteligente que analiza el precio de Bitcoin en tiempo real, permite simular escenarios de mercado y genera señales de compra/venta mediante Machine Learning para apoyar la identificación de tendencias.",
+        tech: [
+            "Python",
+            "FastAPI",
+            "Scikit-Learn",
+            "Pandas",
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+            "Recharts",
+        ],
+        link: "https://tradecore-ai.vercel.app/",
+        github: "https://github.com/Nilyz/bitcoin-price-predictor",
+        type: "AI",
+        image: "/tradecore_preview.png",
+    },
     {
         title: "Botzy PDF",
         description:
@@ -30,14 +49,7 @@ export const PROJECTS: Project[] = [
         title: "SkillBridge",
         description:
             "Tu asistente de carrera inteligente impulsado por IA que analiza CVs, detecta habilidades, planifica transiciones de carrera y compara perfiles contra ofertas de trabajo en tiempo real.",
-        tech: [
-            "Python",
-            "Streamlit",
-            "Llama 3",
-            "Groq API",
-            "PyMuPDF",
-            "RAG",
-        ],
+        tech: ["Python", "Streamlit", "Llama 3", "Groq API", "PyMuPDF", "RAG"],
         link: "#",
         github: "https://github.com/tu-usuario/skillbridge",
         type: "AI",
