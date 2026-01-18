@@ -10,6 +10,25 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
     {
+        title: "ClauseWatch AI",
+        description:
+            "Analizador legal inteligente especializado en Derecho Laboral Español. Utiliza una arquitectura híbrida para detectar cláusulas abusivas con privacidad absoluta y explicaciones jurídicas detalladas.",
+        tech: [
+            "Next.js",
+            "FastAPI",
+            "Python",
+            "PyTorch",
+            "Hugging Face",
+            "Google Gemini",
+            "Docker",
+            "SQLite",
+        ],
+        link: "https://clause-watch-ia.vercel.app/",
+        github: "https://github.com/Nilyz/clause-watch-ia",
+        type: "AI",
+        image: "/clausewatch_preview.png", 
+    },
+    {
         title: "TradeCore",
         description:
             "Dashboard financiero inteligente que analiza el precio de Bitcoin en tiempo real, permite simular escenarios de mercado y genera señales de compra/venta mediante Machine Learning para apoyar la identificación de tendencias.",
@@ -40,7 +59,7 @@ export const PROJECTS: Project[] = [
             "Chromadb",
             "RAG",
         ],
-        link: "https://github.com/Nilyz/llm-pdf-assistant",
+        link: "https://llm-pdf-assistant.streamlit.app/",
         github: "https://github.com/Nilyz/llm-pdf-assistant",
         type: "AI",
         image: "/botzy_preview.png",
